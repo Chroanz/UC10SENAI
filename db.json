@@ -1,0 +1,34 @@
+{
+  "noticias": [
+    {
+      "id": 1,
+      "imagem": "",
+      "titulo": "Teste1",
+      "descricao": "Testando o json"
+    },
+    {
+      "imagem": "",
+      "titulo": "paralelepipedo",
+      "descricao": "Testando o json",
+      "id": 2
+    },
+    {
+      "id": 4,
+      "imagem": "",
+      "titulo": "Teste4",
+      "descricao": "Testando o json"
+    },
+    {
+      "id": 5,
+      "imagem": "",
+      "titulo": "Teste5",
+      "descricao": "Testando o json"
+    },
+    {
+      "imagem": "",
+      "titulo": "batata frita",
+      "descricao": "Testando o json",
+      "id": 6
+    }
+  ]
+}
