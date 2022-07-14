@@ -1,3 +1,5 @@
+import { Noticia } from './../../models/noticia';
+import { NoticiasService } from './../../services/noticias.service';
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
 
@@ -8,15 +10,21 @@ import { User } from 'src/app/models/user';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private noticiasService: NoticiasService) { }
+
+  listaNoticias = [] as Noticia[]
 
   ngOnInit(): void {
+    this.carregarNoticias()
   }
 
-  userModel = new User("", "") 
-
-  onSubmit(){
-    console.log(this.userModel)
+  carregarNoticias(){
+    this.noticiasService.getNoticias().subscribe( (noticiasRecebidas: Noticia[]) => {
+      this.listaNoticias = noticiasRecebidas;
+      console.log(this.listaNoticias);
+    } )
   }
+
+
 
 }
